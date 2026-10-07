@@ -1,7 +1,9 @@
-﻿def normalize_vt_success(ioc_type, value, payload):
+def normalize_vt_success(ioc_type, value, payload):
     data = payload["data"]
     attributes = data.get("attributes", {})
-    stats = attributes.get("last_analysis_stats", {})
+    stats = attributes.get("last_analysis_stats")
+    stats_available = stats is not None
+    stats = stats or {}
 
     return {
         "provider": "virustotal",
@@ -10,6 +12,7 @@
             "type": ioc_type,
             "value": value,
         },
+        "stats_available": stats_available,
         "stats": {
             "malicious": stats.get("malicious", 0),
             "suspicious": stats.get("suspicious", 0),
