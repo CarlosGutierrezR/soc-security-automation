@@ -1,0 +1,38 @@
+﻿# Secrets and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+*.p12
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE / editors
+.vscode/
+.idea/
+
+# Operating system
+Thumbs.db
+.DS_Store
+
+# Temporary files
+*.tmp
+*.temp
+*~
+*.log
+
+# Raw SOC evidence
+evidence/raw/
+
+# Local outputs
+output/
+reports/local/
