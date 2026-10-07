@@ -133,6 +133,13 @@ def test_extract_iocs_from_normalized_wazuh_alert():
     assert {
         "type": "sha256",
         "value": (
-            "97ac98b1a92c286054cce55239cfccdfc" "23a5517bd07fe693072c9ca96c7dabb"
+            "97ac98b1a92c286054cce55239cfccdfc"
+            "23a5517bd07fe693072c9ca96c7dabb"
         ),
     } in result
+
+
+def test_extract_domains_rejects_text_filename():
+    text = "Marker written to SEC-AUTO-001-marker.txt"
+
+    assert extract_domains(text) == []

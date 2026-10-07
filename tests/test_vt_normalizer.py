@@ -1,4 +1,4 @@
-﻿import sys
+import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
@@ -32,6 +32,7 @@ def test_normalize_vt_success():
             "type": "domain",
             "value": "example.com",
         },
+        "stats_available": True,
         "stats": {
             "malicious": 2,
             "suspicious": 1,
@@ -52,6 +53,8 @@ def test_normalize_vt_success_defaults_missing_stats_to_zero():
     }
 
     result = normalize_vt_success("sha256", "a" * 64, payload)
+
+    assert result["stats_available"] is False
 
     assert result["stats"] == {
         "malicious": 0,
