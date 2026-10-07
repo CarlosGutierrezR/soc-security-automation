@@ -1,4 +1,4 @@
-﻿# SEC-AUTO-001 - Alert Enrichment and Case Preparation
+# SEC-AUTO-001 - Alert Enrichment and Case Preparation
 
 ## Problem
 

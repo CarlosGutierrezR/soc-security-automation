@@ -1,4 +1,4 @@
-﻿# Data Sanitization
+# Data Sanitization
 
 ## SEC-AUTO-001
 
