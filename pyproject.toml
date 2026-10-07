@@ -1,0 +1,13 @@
+[project]
+name = "soc-security-automation"
+version = "0.1.0"
+description = "Vendor-neutral SOC alert enrichment and case-preparation workflow (SEC-AUTO-001)."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.13"
+authors = [{ name = "Carlos Alberto Gutiérrez Rondón" }]
+dependencies = ["requests==2.32.5"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
