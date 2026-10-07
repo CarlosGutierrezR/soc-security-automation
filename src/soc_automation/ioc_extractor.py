@@ -83,6 +83,7 @@ NON_DOMAIN_SUFFIXES = {
     "msi",
     "scr",
     "lnk",
+    "txt",
 }
 
 
