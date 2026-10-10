@@ -58,8 +58,6 @@ def test_workflow_external_context_can_raise_risk():
     assert case["risk"]["score"] == 85
     assert case["decision"]["risk"] == "high"
 
-    assert case["decision"]["action"] == (
-        "create_case_and_propose_containment"
-    )
+    assert case["decision"]["action"] == ("create_case_and_propose_containment")
 
     assert case["approval_required"] is True

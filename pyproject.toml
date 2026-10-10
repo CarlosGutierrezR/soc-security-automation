@@ -6,8 +6,14 @@ readme = "README.md"
 license = "MIT"
 requires-python = ">=3.13"
 authors = [{ name = "Carlos Alberto Gutiérrez Rondón" }]
-dependencies = ["requests==2.32.5"]
+dependencies = ["requests==2.34.2"]
 
 [tool.pytest.ini_options]
 pythonpath = ["src"]
 testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]

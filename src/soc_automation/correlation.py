@@ -10,7 +10,9 @@ def is_parent_child_related(parent_alert, child_alert, max_seconds=5):
 
     pid_match = parent_alert["process"]["pid"] == child_alert["parent_process"]["pid"]
 
-    guid_match = parent_alert["process"]["guid"] == child_alert["parent_process"]["guid"]
+    guid_match = (
+        parent_alert["process"]["guid"] == child_alert["parent_process"]["guid"]
+    )
 
     parent_time = parse_timestamp(parent_alert["timestamp"])
     child_time = parse_timestamp(child_alert["timestamp"])

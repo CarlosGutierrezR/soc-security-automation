@@ -25,8 +25,7 @@ def test_extract_sha256():
         {
             "type": "sha256",
             "value": (
-                "97ac98b1a92c286054cce55239cfccdfc"
-                "23a5517bd07fe693072c9ca96c7dabb"
+                "97ac98b1a92c286054cce55239cfccdfc23a5517bd07fe693072c9ca96c7dabb"
             ),
         }
     ]
@@ -90,8 +89,7 @@ def test_extract_iocs_combines_supported_types():
         {
             "type": "sha256",
             "value": (
-                "97ac98b1a92c286054cce55239cfccdfc"
-                "23a5517bd07fe693072c9ca96c7dabb"
+                "97ac98b1a92c286054cce55239cfccdfc23a5517bd07fe693072c9ca96c7dabb"
             ),
         },
         {
@@ -132,10 +130,7 @@ def test_extract_iocs_from_normalized_wazuh_alert():
 
     assert {
         "type": "sha256",
-        "value": (
-            "97ac98b1a92c286054cce55239cfccdfc"
-            "23a5517bd07fe693072c9ca96c7dabb"
-        ),
+        "value": ("97ac98b1a92c286054cce55239cfccdfc23a5517bd07fe693072c9ca96c7dabb"),
     } in result
 
 
