@@ -17,7 +17,7 @@ def test_vt_ipv4_lookup_dry_run():
         "status": "dry_run",
         "request": {
             "method": "GET",
-            "url": ("https://www.virustotal.com/api/v3/" "ip_addresses/8.8.8.8"),
+            "url": ("https://www.virustotal.com/api/v3/ip_addresses/8.8.8.8"),
         },
     }
 

@@ -1,5 +1,5 @@
-import re
 import ipaddress
+import re
 
 SHA256_PATTERN = re.compile(r"\b[a-fA-F0-9]{64}\b")
 
